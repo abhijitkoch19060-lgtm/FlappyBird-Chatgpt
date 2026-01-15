@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ancient Flappy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-wrapper">
+
+  <!-- CANVAS -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- MENU -->
+  <div id="menu" class="overlay active">
+    <h1>Ancient Flappy</h1>
+    <button class="btn green" id="newGameBtn">New Game</button>
+    <button class="btn blue" id="settingsBtn">Settings</button>
+    <button class="btn red" onclick="window.close()">Quit</button>
+  </div>
+
+  <!-- SETTINGS -->
+  <div id="settings" class="overlay">
+    <h2>Settings</h2>
+
+    <label>Bird Body Color</label>
+    <input type="color" id="birdColor" value="#2ecc71">
+
+    <label>Bird Eye Size</label>
+    <input type="range" id="eyeSize" min="3" max="10" value="6">
+
+    <label>Sound Volume</label>
+    <input type="range" id="sfxVolume" min="0" max="1" step="0.1" value="0.6">
+
+    <label>Music Volume</label>
+    <input type="range" id="musicVolume" min="0" max="1" step="0.1" value="0.4">
+
+    <label>
+      <input type="checkbox" id="muteToggle"> Mute All
+    </label>
+
+    <button class="btn green" id="backBtn">Back</button>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">0</div>
+
+  <!-- COUNTDOWN -->
+  <div id="countdown"></div>
+
+  <!-- GAME OVER -->
+  <div id="gameOver" class="overlay">
+    <h1>Game Over</h1>
+    <button class="btn green" onclick="startGame()">Reset</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
